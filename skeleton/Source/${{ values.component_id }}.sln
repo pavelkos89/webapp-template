@@ -1,0 +1,72 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{53A14D4B-878F-4467-861F-9DBECB089CD0}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Chocolatey", "Chocolatey\Chocolatey.shproj", "{D4424E77-6F52-4DFA-A9B3-D7C590122172}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Docker", "Docker\Docker.shproj", "{1BE3F95E-917E-4596-865F-7B1DB1CCAA05}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "${{ values.component_id }}", "${{ values.component_id }}\${{ values.component_id }}.csproj", "{41BE427B-312C-4C19-8930-19A9CF5AF69A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "${{ values.component_id }}.Tests", "${{ values.component_id }}.Tests\${{ values.component_id }}.Tests.csproj", "{CBA30D86-544A-4D45-9F01-1B70EEDC997F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pipelines", "Pipelines", "{7F1275C2-A31E-4C8A-BFD1-2F82EF49CF2A}"
+	ProjectSection(SolutionItems) = preProject
+		..\Pipelines\masterbuildanddeploy.yml = ..\Pipelines\masterbuildanddeploy.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{80AA4DC3-B7E1-47B4-98AC-EAC434466D66}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+		..\Gruntfile.js = ..\Gruntfile.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configuration", "{5A2EC420-9414-4E6A-AAE8-B165CAD6F67B}"
+	ProjectSection(SolutionItems) = preProject
+		..\.editorconfig = ..\.editorconfig
+		..\.gitattributes = ..\.gitattributes
+		..\.gitignore = ..\.gitignore
+		nuget.config = nuget.config
+		..\package.json = ..\package.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{54FD86AA-D947-49FF-AFD5-0763AB3125EE}"
+	ProjectSection(SolutionItems) = preProject
+		..\Documentation\${{ values.component_id }}.install.md = ..\Documentation\${{ values.component_id }}.install.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Docker\Docker.projitems*{1be3f95e-917e-4596-865f-7b1db1ccaa05}*SharedItemsImports = 13
+		Chocolatey\ChocolateyX.projitems*{d4424e77-6f52-4dfa-a9b3-d7c590122172}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{41BE427B-312C-4C19-8930-19A9CF5AF69A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41BE427B-312C-4C19-8930-19A9CF5AF69A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41BE427B-312C-4C19-8930-19A9CF5AF69A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41BE427B-312C-4C19-8930-19A9CF5AF69A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBA30D86-544A-4D45-9F01-1B70EEDC997F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBA30D86-544A-4D45-9F01-1B70EEDC997F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBA30D86-544A-4D45-9F01-1B70EEDC997F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBA30D86-544A-4D45-9F01-1B70EEDC997F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7F1275C2-A31E-4C8A-BFD1-2F82EF49CF2A} = {53A14D4B-878F-4467-861F-9DBECB089CD0}
+		{80AA4DC3-B7E1-47B4-98AC-EAC434466D66} = {53A14D4B-878F-4467-861F-9DBECB089CD0}
+		{5A2EC420-9414-4E6A-AAE8-B165CAD6F67B} = {53A14D4B-878F-4467-861F-9DBECB089CD0}
+		{54FD86AA-D947-49FF-AFD5-0763AB3125EE} = {53A14D4B-878F-4467-861F-9DBECB089CD0}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9E10CE62-051C-4C05-B9C5-FE35C8797075}
+	EndGlobalSection
+EndGlobal

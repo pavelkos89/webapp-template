@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<parameters>
+  <parameter name="IIS Web Application Name" defaultValue="${{ values.component_id }}" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp|contentPath|createApp" match=".*" />
+  </parameter>
+  <parameter name="ConfigServer.BaseUrl" description="Config Server Url" defaultValue="https://configserver_url">
+    <parameterEntry kind="TextFile" scope="\\appsettings\.json$" match="(?&lt;=\&quot;ConfigServer.BaseUrl\&quot;\s*:\s*\&quot;)[^\&quot;]*" />
+  </parameter>
+  <parameter name="ConfigServer.Password" description="Config Server Password" defaultValue="_MUSTPROVIDED_">
+    <parameterEntry kind="TextFile" scope="\\appsettings\.json$" match="(?&lt;=\&quot;ConfigServer.Password\&quot;\s*:\s*\&quot;)[^\&quot;]*" />
+  </parameter>
+  <parameter name="ConfigServer.Scopes" description="Config Server Scope" defaultValue="*">
+    <parameterEntry kind="TextFile" scope="\\appsettings\.json$" match="(?&lt;=\&quot;ConfigServer.Scopes\&quot;\s*:\s*\&quot;)[^\&quot;]*" />
+  </parameter>
+</parameters>

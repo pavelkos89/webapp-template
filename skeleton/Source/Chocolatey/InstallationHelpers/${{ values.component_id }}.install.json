@@ -1,0 +1,11 @@
+{
+  "ChocoPackageInstaller": [
+    {
+      "Name": "${{ values.component_id }}",
+      "ServerName": "TargetMachine",
+      "Source": "'\\\\INSTALLMACHINE\\c$\\ElementsInstall\\ChocoInstall\\ChocoPackages\\;https://chocolatey.org/api/v2/'",
+      "StatusExpected": "Ok",
+      "PackageParameters": "/ConfigServer.Scopes:My-Custom-Scope /ConfigServer.BaseUrl:http://CONFIGSERVER/CONFIGSITE /ConfigServer.Password:My-Custom-Password /IIS_Application:APPNAME /AppPool_Name:APPOOL /AppPool_Username:DOMAIN\\USER /AppPool_Password:PWD"
+    }
+  ]
+}
